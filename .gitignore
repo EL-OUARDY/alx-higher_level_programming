@@ -1,0 +1,9 @@
+# Ignore Vi/Vim swap files
+*.swp
+
+# Ignore Emacs backup files
+*~
+
+# Ignore C compiled code
+*.o
+*.out
