@@ -14,4 +14,4 @@ if __name__ == "__main__":
 
     # loop through argv list and display each argument
     for i in range(args_count):
-        print("{:d}:  {:s}".format((i + 1), sys.argv[i + 1]))
+        print("{:d}: {:s}".format((i + 1), sys.argv[i + 1]))
