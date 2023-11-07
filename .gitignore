@@ -1,3 +1,9 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
 # Ignore Vi/Vim swap files
 *.swp
 
