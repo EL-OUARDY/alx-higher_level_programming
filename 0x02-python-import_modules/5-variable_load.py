@@ -5,4 +5,3 @@ if __name__ == "__main__":  # don't run if being imported
     from variable_load_5 import a
 
     print(a)
-
