@@ -74,7 +74,6 @@ class Square:
 
         return position
 
-
     def my_print(self):
         """Print the square with the # character."""
         print(self.position_print(), end='')
