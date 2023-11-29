@@ -46,6 +46,60 @@ Test case 7: No arguments
     >>> print(matrix_mul()) # doctest: +NORMALIZE_WHITESPACE
     Traceback (most recent call last):
         ...
-    TypeError: matrix_mul() missing 2 required positional arguments:
-    'm_a' and 'm_b'
+    TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
 
+Test case 8: floats and integers combined
+    >>> m_a = [
+    ... [1, 2.2, 3.3, 4],
+    ... [5, 6, 7, 8.8],
+    ... ]
+    >>> m_b = [
+    ... [1.1, 2, 3.3],
+    ... [4.0, 5.5, 6],
+    ... [7, 8, 9],
+    ... [10.01, 11, 12.3]
+    ... ]
+    >>> print(matrix_mul(m_a, m_b))
+    [[73.03999999999999, 84.5, 95.4], [166.58800000000002, 195.8, 223.74]]
+
+Test case 9: empty m_a
+    >>> print(matrix_mul([], [[1, 2]]))
+    Traceback (most recent call last):
+    ValueError: m_a can't be empty
+
+Test case 10: empty m_b sub list
+    >>> print(matrix_mul([[1, 2]], [[]]))
+    Traceback (most recent call last):
+    ValueError: m_b can't be empty
+
+Test case 11: empty lists
+    >>> print(matrix_mul([[]], []))
+    Traceback (most recent call last):
+    ValueError: m_a can't be empty
+
+Test case 12: unsuported argument
+    >>> print(matrix_mul("Hi mom", [[1, 2]]))
+    Traceback (most recent call last):
+    TypeError: m_a must be a list
+
+    >>> print(matrix_mul([[1, 2]], "Bye mom"))
+    Traceback (most recent call last):
+    TypeError: m_b must be a list
+
+Test case 13: Passing None
+    >>> print(matrix_mul(None, None))
+    Traceback (most recent call last):
+    TypeError: m_a must be a list
+
+Test case 14: Valid lists
+    >>> print(matrix_mul([[1, "julien"]], [[11, 0]]))
+    Traceback (most recent call last):
+    TypeError: m_a should contain only integers or floats
+
+    >>> print(matrix_mul([[1, 2]], [[{"x": 1}, 7.9]]))
+    Traceback (most recent call last):
+    TypeError: m_b should contain only integers or floats
+
+    >>> print(matrix_mul([[1, "mom"]], [[{"x": 1}, 3.14]]))
+    Traceback (most recent call last):
+    TypeError: m_a should contain only integers or floats
