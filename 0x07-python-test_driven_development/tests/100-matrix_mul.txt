@@ -1,0 +1,51 @@
+Test cases 100-matrix_mul.py
+============================
+
+Usage
+=====
+    matrix_mul(m_a, m_b)
+
+import our function
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+Test case 1: Multiplication of matrices with valid dimensions
+    >>> matrix_mul([[1, 2, 3], [4, 5, 6]], [[7, 8], [9, 10], [11, 12]])
+    [[58, 64], [139, 154]]
+
+Test case 2: Matrices with incompatible dimensions for multiplication
+    >>> matrix_mul([[1, 2], [3, 4], [0, 1.6]], [[5, 6, 7], [2, 2.4, 4.0], [0, 0 , 0]])
+    Traceback (most recent call last):
+        ...
+    ValueError: m_a and m_b can't be multiplied
+
+Test case 3: Matrices with non-numeric elements
+    >>> matrix_mul([[1, 'a'], [3, 4]], [[5, 6], [7, 8]])
+    Traceback (most recent call last):
+        ...
+    TypeError: m_a should contain only integers or floats
+
+Test case 4: Empty matrices provided as input
+    >>> matrix_mul([], [])
+    Traceback (most recent call last):
+        ...
+    ValueError: m_a can't be empty
+
+Test case 5: Invalid input type for m_b
+    >>> matrix_mul([[1, 2], [3, 4]], 'test')
+    Traceback (most recent call last):
+        ...
+    TypeError: m_b must be a list
+
+Test case 6: Only one argument
+    >>> print(matrix_mul([1, 2])) # doctest: +NORMALIZE_WHITESPACE
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
+
+Test case 7: No arguments
+    >>> print(matrix_mul()) # doctest: +NORMALIZE_WHITESPACE
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix_mul() missing 2 required positional arguments:
+    'm_a' and 'm_b'
+
