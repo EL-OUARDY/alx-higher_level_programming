@@ -12,8 +12,8 @@ text_indentation(text)
     import function
     >>> text_indentation = __import__('5-text_indentation').text_indentation
 
-    >>> text_indentation("Hi Mom!")
-    Hi Mom!
+    >>> text_indentation("Hi Mom?")
+    Hi Mom?
     <BLANKLINE>
 
 No spaces at the beginning of a line
@@ -38,38 +38,37 @@ no spaces at the end
 
 ::
 
-    >>> text_indentation("    Woah now.    This is messy.   ")
-    Woah now.
+    >>> text_indentation("    javascript.    no way python.   ")
+    javascript.
     <BLANKLINE>
-    This is messy.
+    no way python.
     <BLANKLINE>
 
-New lines are only printed for the characters ``.``, ``?``, and ``:`` -
-text not ending with one of these characters is not ended with a new line.
-
-::
-
-    >>> text_indentation("No ending period, what bad grammar")
-    No ending period, what bad grammar
-
-New lines within a string are printed as normal.
+New lines are only printed for the special characters ``.``, ``?``, and ``:``
 
 ::
 
-    >>> text_indentation("Let's print a new-line! Here goes:\nPrinted.")
-    Let's print a new-line! Here goes:
+    >>> text_indentation("The quiter you become, the more you are able to hear")
+    The quiter you become, the more you are able to hear
+
+\n characters in a string are printed normal
+
+::
+
+    >>> text_indentation("python is awesome! everyone knows why:\nJulien.")
+    python is awesome! everyone knows why:
     <BLANKLINE>
     <BLANKLINE>
-    Printed.
+    Julien.
     <BLANKLINE>
 
 ::
 
-    >>> text_indentation("\n\n\n We just printed three new lines.")
+    >>> text_indentation("\n\n\n I'm tired of being first.")
     <BLANKLINE>
     <BLANKLINE>
     <BLANKLINE>
-    We just printed three new lines.
+    I'm tired of being first.
     <BLANKLINE>
 
 ::
@@ -121,25 +120,26 @@ A combo example:
     <BLANKLINE>
     Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
-Invalid Text
-============
+wrong input text
+================
 
-The paramter ``text`` must be a string. Otherwise, a TypeError is raised.
-
-::
-
-    >>> text_indentation(7)
-    Traceback (most recent call last):
-    TypeError: text must be a string
-
-::
-
-    >>> text_indentation({"one": 1, "two": 2})
-    Traceback (most recent call last):
-    TypeError: text must be a string
+text must be a string. Otherwise, a TypeError is raised.
 
 ::
 
     >>> text_indentation(None)
     Traceback (most recent call last):
     TypeError: text must be a string
+
+::
+
+    >>> text_indentation(99)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+::
+
+    >>> text_indentation({"a": 1, "b": 2})
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
