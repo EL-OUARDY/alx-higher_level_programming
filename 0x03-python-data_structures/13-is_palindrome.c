@@ -32,7 +32,8 @@ int is_palindrome(listint_t **head)
 		return (1);
 
 	/* Find the middle node */
-	listint_t *slow = *head, *fast = *head;
+	listint_t *slow = *head;
+	listint_t *fast = *head;
 
 	while (fast->next && fast->next->next)
 	{
@@ -41,7 +42,9 @@ int is_palindrome(listint_t **head)
 	}
 
 	/* Split the list into two halves */
-	listint_t *second_half = reverse_list(&slow->next);
+	listint_t *second_half;
+
+	second_half = reverse_list(&slow->next);
 
 	/* Compare the first half with the reversed second half */
 	listint_t *first = *head, *second = second_half;
