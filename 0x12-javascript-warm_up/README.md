@@ -1,4 +1,4 @@
-# JavaScript — Alx Low Level Programming
+# JavaScript — Alx Higher Level Programming
 0x12. JavaScript - Warm up
 
 ## 1. Introduction
