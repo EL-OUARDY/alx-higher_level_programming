@@ -21,4 +21,3 @@ if (args.length < 4) {
   // print second biggest number
   console.log(second);
 }
-
