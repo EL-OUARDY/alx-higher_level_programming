@@ -14,7 +14,7 @@ function Person(name) {
   this.name = name;
 }
 
-let person = new Person('John');
+let person = new Person('Ouadia');
 ```
 **Object.create() method:**
 ```js
@@ -88,6 +88,45 @@ Dog.prototype.constructor = Dog;
 let myDog = new Dog('Buddy', 'Labrador');
 myDog.sound(); // Output: Buddy makes a sound
 ```
+
+## Class Notation in JavaScript
+In JavaScript, class notation provides a more structured and familiar way to define and work with classes, making object-oriented programming (OOP) concepts more accessible. Here's how to define a class using class notation:
+```js
+class Car {
+  // Constructor method to initialize object properties
+  constructor(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+  }
+
+  // Method to get the car's details
+  getDetails() {
+    return `${this.year} ${this.make} ${this.model}`;
+  }
+
+  // Static method to calculate the average age of cars
+  static calculateAverageAge(cars) {
+    const totalYears = cars.reduce((acc, car) => acc + car.year, 0);
+    return totalYears / cars.length;
+  }
+}
+
+// Creating an instance of the Car class
+const myCar = new Car('Toyota', 'Camry', 2022);
+console.log(myCar.getDetails()); // Outputs: 2022 Toyota Camry
+
+// Creating an array of cars
+const cars = [
+  new Car('Toyota', 'Corolla', 2018),
+  new Car('Honda', 'Civic', 2019),
+  new Car('Ford', 'Mustang', 2020)
+];
+
+// Using a static method
+console.log(Car.calculateAverageAge(cars)); // Outputs: 2019
+```
+
 
 ## Let's connect
 **Twitter:** https://twitter.com/_ELOUARDY \
