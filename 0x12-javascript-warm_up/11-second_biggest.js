@@ -1,15 +1,18 @@
 #!/usr/bin/node
 const args = process.argv;
 
-let biggest = args[0];
-let second = args[0];
-
-// check user inputs
+// check user input
 if (args.length < 4) {
   console.log(0);
 } else {
-  // loop through args vector
-  args.forEach((num) => {
+  // remove first items (node args) and convert each array item to integer
+  const inputs = args.slice(2).map(Number);
+
+  let biggest = inputs[0];
+  let second = inputs[0];
+
+  // loop through inputs array
+  inputs.forEach((num) => {
     if (num > biggest) {
       second = biggest;
       biggest = num;

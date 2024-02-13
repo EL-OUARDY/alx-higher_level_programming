@@ -13,3 +13,6 @@ __pycache__/
 # Ignore C compiled code
 *.o
 *.out
+
+# vscode config
+.vscode
