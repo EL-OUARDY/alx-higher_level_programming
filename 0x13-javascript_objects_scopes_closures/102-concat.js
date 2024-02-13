@@ -16,7 +16,6 @@ if (args.length >= 5) { // check arguments existance
 
   // write the contents to the destination file
   fs.writeFileSync(target, content1 + content2);
-
 } else {
   console.log('Usage: node concat.js <source1> <source2> <target>');
 }

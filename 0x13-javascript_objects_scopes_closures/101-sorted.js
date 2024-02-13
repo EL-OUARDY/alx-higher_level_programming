@@ -4,9 +4,9 @@ const dict = require('./101-data').dict;
 
 const newDict = {};
 
-for (let key in dict) {
-  let k = dict[key];
-  let v = key;
+for (const key in dict) {
+  const k = dict[key];
+  const v = key;
 
   if (!(newDict[k] instanceof Array)) {
     newDict[k] = [];
@@ -15,4 +15,4 @@ for (let key in dict) {
 }
 
 // print the new dictionary
-console.log(newDict)
+console.log(newDict);
