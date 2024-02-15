@@ -10,7 +10,7 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    # get database info from input arguments
+    # get user input arguments
     username = argv[1]
     password = argv[2]
     database_name = argv[3]

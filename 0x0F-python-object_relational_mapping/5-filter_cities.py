@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This script  takes in the name of a state as an argument
+This script takes in the name of a state as an argument
 and lists all cities of that state, using the database hbtn_0e_4_usa
 Protected against SQL injections!
 """
@@ -10,7 +10,7 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    # get database info from input arguments
+    # get user input arguments
     username = argv[1]
     password = argv[2]
     database_name = argv[3]

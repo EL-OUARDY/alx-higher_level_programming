@@ -91,6 +91,7 @@ session.add(new_user)
 new_address = Address(email='el_ouardy@example.com', user=new_user)
 session.add(new_address)
 
+# commit pending changes
 session.commit()
 
 # Example: Querying data from the database
