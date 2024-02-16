@@ -9,7 +9,7 @@ if (args.length < 4) {
   const inputs = args.slice(2).map(Number);
 
   let biggest = inputs[0];
-  let second = inputs[0];
+  let second = inputs[1];
 
   // loop through inputs array
   inputs.forEach((num) => {
