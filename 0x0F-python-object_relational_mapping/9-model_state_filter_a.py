@@ -29,9 +29,7 @@ if __name__ == "__main__":
     session = Session()
 
     # get all state records that contain the letter "a"
-    states = (
-        session.query(State).filter(State.name.contains("a")).order_by(State.id)
-    )
+    states = session.query(State).filter(State.name.contains("a"))
     for state in states:
         print(f"{state.id}: {state.name}")
 

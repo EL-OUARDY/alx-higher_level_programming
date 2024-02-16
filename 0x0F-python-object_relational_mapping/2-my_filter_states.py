@@ -25,10 +25,8 @@ if __name__ == "__main__":
         cursor = connection.cursor()
 
         # execute SQL query
-        query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(
-            state_name
-        )
-        cursor.execute(query)
+        query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC"
+        cursor.execute(query.format(state_name))
 
         # get response data
         rows = cursor.fetchall()

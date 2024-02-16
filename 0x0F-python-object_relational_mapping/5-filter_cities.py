@@ -26,7 +26,10 @@ if __name__ == "__main__":
         cursor = connection.cursor()
 
         # execute SQL query
-        query = "SELECT c.name FROM cities c JOIN states s ON c.state_id = s.id WHERE s.name = %s ORDER BY c.id ASC"
+        query = """
+            SELECT c.name FROM cities c JOIN states s ON c.state_id = s.id
+            WHERE s.name = %s ORDER BY c.id ASC
+        """
         cursor.execute(query, (state_name,))
 
         # get response data
