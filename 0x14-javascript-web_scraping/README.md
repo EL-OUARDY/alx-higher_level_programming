@@ -40,13 +40,18 @@ console.log(jsonString); // Output: {"name":"EL_OUARDY","age":26}
 ## Using Request and Fetch API
 ``Request`` and ``Fetch`` APIs are used to make HTTP requests in JavaScript. Fetch is more modern and versatile, while Request is simpler and easier to use in some scenarios. 
 
-Example using Request
+Example using Request module:
 ```js
-const requestURL = "https://example.io/endpoint.json";
-const request = new Request(requestURL);
+const request = require('request');
 
-const response = await fetch(request);
-const data = await response.json();
+const requestURL = "https://example.io/endpoint.json";
+request.get(requestURL, (error, response) => {
+    if (error) {
+        console.error('Error:', error);
+    } else {
+        console.log('code:', response.statusCode);
+    }
+});
 ```
 
 Here's a basic example of how to use Fetch API:
