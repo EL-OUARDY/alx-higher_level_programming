@@ -4,14 +4,14 @@ const request = require('request');
 
 // computes the number of tasks completed by user id.
 const endpoint = process.argv[2];
-let result = {}
+const result = {};
 
 request.get(endpoint, (error, response, body) => {
   if (error) {
     console.log(error);
   } else {
     // parse the json to an object
-    todos = JSON.parse(body);
+    const todos = JSON.parse(body);
 
     todos.forEach((todo) => {
       if (todo.completed) {

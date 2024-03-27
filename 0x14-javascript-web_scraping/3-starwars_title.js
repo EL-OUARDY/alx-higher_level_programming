@@ -12,7 +12,7 @@ request.get(url, (error, response, body) => {
     console.log(error);
   } else {
     // parse the json to an object
-    movieObj = JSON.parse(body);
+    const movieObj = JSON.parse(body);
     console.log(movieObj.title);
   }
 });

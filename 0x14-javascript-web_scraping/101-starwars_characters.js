@@ -17,7 +17,7 @@ request(endpoint, (error, response, body) => {
   printCharacterName();
 });
 
-function printCharacterName(index = 0) {
+function printCharacterName (index = 0) {
   if (index < charactersList.length) {
     request(charactersList[index], (error, response, body) => {
       if (error) {
@@ -28,4 +28,4 @@ function printCharacterName(index = 0) {
       printCharacterName(++index);
     });
   }
-};
+}
