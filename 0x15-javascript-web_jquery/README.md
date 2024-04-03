@@ -90,6 +90,29 @@ $.post("submit.php", { name: "EL-OUARDY", age: 26 }, function(data) {
 });
 ```
 
+## jQuery ready
+In jQuery, the **ready()** method is used to execute code when the DOM (Document Object Model) is fully loaded. It ensures that your code runs only after the DOM is ready to be manipulated, which is essential for preventing issues with accessing elements that haven't yet been created.
+
+```js
+$(document).ready(function() {
+  // Your code here
+  console.log("DOM is ready!");
+
+  // You can manipulate DOM elements here
+});
+```
+
+Alternatively, you can use a shorthand version of ready() by passing a function directly to the jQuery object:
+
+```js
+$(function() {
+  // Your code here
+  console.log("DOM is ready!");
+
+  // You can manipulate DOM elements here
+});
+```
+
 ## Contact Me
 **Email:** ouadia@elouardy.com \
 **Twitter:** https://twitter.com/_ELOUARDY
